@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en" data-palette="default" data-density="comfy" data-type="instrument">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kazan — Portable Kitchen Appliances · Thesis P2773314</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="styles.css"/>
+
+<template id="__bundler_thumbnail" data-bg-color="#F6F2EA">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+    <rect width="400" height="400" fill="#F6F2EA"/>
+    <text x="200" y="240" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="200" fill="#1B1A17">K</text>
+    <text x="200" y="310" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#8E4B2A" letter-spacing="3">KAZAN — THESIS</text>
+  </svg>
+</template>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  
+  <script type="application/json" id="data-products">[{"id":335,"cat":"Portable Kettle","brand":"RoamWarm","name_en":"RoamWarm Rapid-Boil Portable Kettle 391-X","name_ru":"RoamWarm быстрокипятильный Portable Kettle 391-X","desc_en":"The RoamWarm 391-X is a rapid-boil portable kettle designed for on-the-go use. Features include 0.5L capacity and 1000W heating element. Ideal for car travel, camping, and small spaces.","desc_ru":"RoamWarm 391-X — это быстрокипятильный portable kettle для использования в дороге. Особенности: чехол в комплекте и LED-индикатор. Идеально для автопутешествий, кемпинга и небольших пространств.","price":2700,"pop":875},{"id":375,"cat":"Portable Kettle","brand":"PortaBoil","name_en":"PortaBoil Stainless Steel Portable Kettle 271-B","name_ru":"PortaBoil складной Portable Kettle 271-B","desc_en":"The PortaBoil 271-B is a stainless steel portable kettle designed for on-the-go use. Features include carry pouch included and 360° swivel base. Ideal for car travel, camping, and small spaces.","desc_ru":"PortaBoil 271-B — это складной portable kettle для использования в дороге. Особенности: поворотная база 360° и ёмкость 0.5 л. Идеально для автопутешествий, кемпинга и небольших пространств.","price":5260,"pop":184},{"id":601,"cat":"Portable Kettle","brand":"SwiftKettle","name_en":"SwiftKettle Travel-Sized Portable Kettle 984-G","name_ru":"SwiftKettle из нержавеющей стали Portable Kettle 984-G","desc_en":"The SwiftKettle 984-G is a travel-sized portable kettle designed for on-the-go use. Features include 1000W heating element and LED indicator. Ideal for car travel, camping, and small spaces.","desc_ru":"SwiftKettle 984-G — это из нержавеющей стали portable kettle для использования в дороге. Особенности: автоотключение и BPA-свободный корпус. Идеально для автопутешествий, кемпинга и небольших пространств.","price":7570,"pop":73},{"id":993,"cat":"Portable Kettle","brand":"SwiftKettle","name_en":"SwiftKettle Compact Portable Kettle 758-A","name_ru":"SwiftKettle компактный Portable Kettle 758-A","desc_en":"The SwiftKettle 758-A is a compact portable kettle designed for on-the-go use. Features include 2-minute boil time and 360° swivel base. Ideal for car travel, camping, and small spaces.","desc_ru":"SwiftKettle 758-A — это компактный portable kettle для использования в дороге. Особенности: чехол в комплекте и BPA-свободный корпус. Идеально для автопутешествий, кемпинга и небольших пространств.","price":4270,"pop":48},{"id":966,"cat":"Portable Kettle","brand":"RoamWarm","name_en":"RoamWarm Foldable Portable Kettle 329-B","name_ru":"RoamWarm из нержавеющей стали Portable Kettle 329-B","desc_en":"The RoamWarm 329-B is a foldable portable kettle designed for on-the-go use. Features include auto shut-off and BPA-free interior. Ideal for car travel, camping, and small spaces.","desc_ru":"RoamWarm 329-B — это из нержавеющей стали portable kettle для использования в дороге. Особенности: автоотключение и поворотная база 360°. Идеально для автопутешествий, кемпинга и небольших пространств.","price":6640,"pop":41},{"id":55,"cat":"Portable Kettle","brand":"KettlePro","name_en":"KettlePro Stainless Steel Portable Kettle 457-B","name_ru":"KettlePro из нержавеющей стали Portable Kettle 457-B","desc_en":"The KettlePro 457-B is a stainless steel portable kettle designed for on-the-go use. Features include 2-minute boil time and 360° swivel base. Ideal for car travel, camping, and small spaces.","desc_ru":"KettlePro 457-B — это из нержавеющей стали portable kettle для использования в дороге. Особенности: LED-индикатор и поворотная база 360°. Идеально для автопутешествий, кемпинга и небольших пространств.","price":2530,"pop":40},{"id":366,"cat":"Portable Kettle","brand":"SwiftKettle","name_en":"SwiftKettle Travel-Sized Portable Kettle 808-D","name_ru":"SwiftKettle двухвольтовый Portable Kettle 808-D","desc_en":"The SwiftKettle 808-D is a travel-sized portable kettle designed for on-the-go use. Features include 360° swivel base and boil-dry protection. Ideal for car travel, camping, and small spaces.","desc_ru":"SwiftKettle 808-D — это двухвольтовый portable kettle для использования в дороге. Особенности: универсальное напряжение 110-240В и LED-индикатор. Идеально для автопутешествий, кемпинга и небольших пространств.","price":4580,"pop":34},{"id":643,"cat":"Portable Kettle","brand":"RoamWarm","name_en":"RoamWarm Foldable Portable Kettle 779-F","name_ru":"RoamWarm дорожный Portable Kettle 779-F","desc_en":"The RoamWarm 779-F is a foldable portable kettle designed for on-the-go use. Features include 0.5L capacity and LED indicator. Ideal for car travel, camping, and small spaces.","desc_ru":"RoamWarm 779-F — это дорожный portable kettle для использования в дороге. Особенности: защита от закипания без воды и LED-индикатор. Идеально для автопутешествий, кемпинга и небольших пространств.","price":2960,"pop":26},{"id":235,"cat":"Portable Kettle","brand":"RoamWarm","name_en":"RoamWarm Collapsible Portable Kettle 182-C","name_ru":"RoamWarm дорожный Portable Kettle 182-C","desc_en":"The RoamWarm 182-C is a collapsible portable kettle designed for on-the-go use. Features include auto shut-off and 1000W heating element. Ideal for car travel, camping, and small spaces.","desc_ru":"RoamWarm 182-C — это дорожный portable kettle для использования в дороге. Особенности: универсальное напряжение 110-240В и ёмкость 0.5 л. Идеально для автопутешествий, кемпинга и небольших пространств.","price":5890,"pop":25},{"id":620,"cat":"Portable Kettle","brand":"KettlePro","name_en":"KettlePro Mini Portable Kettle 258-X","name_ru":"KettlePro из нержавеющей стали Portable Kettle 258-X","desc_en":"The KettlePro 258-X is a mini portable kettle designed for on-the-go use. Features include 0.5L capacity and universal voltage 110-240V. Ideal for car travel, camping, and small spaces.","desc_ru":"KettlePro 258-X — это из нержавеющей стали portable kettle для использования в дороге. Особенности: ёмкость 0.5 л и BPA-свободный корпус. Идеально для автопутешествий, кемпинга и небольших пространств.","price":6990,"pop":21},{"id":363,"cat":"Portable Kettle","brand":"PortaBoil","name_en":"PortaBoil Compact Portable Kettle 887-F","name_ru":"PortaBoil дорожный Portable Kettle 887-F","desc_en":"The PortaBoil 887-F is a compact portable kettle designed for on-the-go use. Features include 0.5L capacity and universal voltage 110-240V. Ideal for car travel, camping, and small spaces.","desc_ru":"PortaBoil 887-F — это дорожный portable kettle для использования в дороге. Особенности: поворотная база 360° и чехол в комплекте. Идеально для автопутешествий, кемпинга и небольших пространств.","price":2530,"pop":2},{"id":475,"cat":"Portable Kettle","brand":"SwiftKettle","name_en":"SwiftKettle Dual-Voltage Portable Kettle 249-D","name_ru":"SwiftKettle коллапсируемый Portable Kettle 249-D","desc_en":"The SwiftKettle 249-D is a dual-voltage portable kettle designed for on-the-go use. Features include LED indicator and BPA-free interior. Ideal for car travel, camping, and small spaces.","desc_ru":"SwiftKettle 249-D — это коллапсируемый portable kettle для использования в дороге. Особенности: BPA-свободный корпус и автоотключение. Идеально для автопутешествий, кемпинга и небольших пространств.","price":2600,"pop":2},{"id":572,"cat":"Portable Kettle","brand":"RoamWarm","name_en":"RoamWarm Collapsible Portable Kettle 120-G","name_ru":"RoamWarm быстрокипятильный Portable Kettle 120-G","desc_en":"The RoamWarm 120-G is a collapsible portable kettle designed for on-the-go use. Features include 2-minute boil time and universal voltage 110-240V. Ideal for car travel, camping, and small spaces.","desc_ru":"RoamWarm 120-G — это быстрокипятильный portable kettle для использования в дороге. Особенности: нагревательный элемент 1000 Вт и чехол в комплекте. Идеально для автопутешествий, кемпинга и небольших пространств.","price":7880,"pop":2},{"id":578,"cat":"Portable Kettle","brand":"PortaBoil","name_en":"PortaBoil Lightweight Portable Kettle 129-X","name_ru":"PortaBoil мини Portable Kettle 129-X","desc_en":"The PortaBoil 129-X is a lightweight portable kettle designed for on-the-go use. Features include universal voltage 110-240V and BPA-free interior. Ideal for car travel, camping, and small spaces.","desc_ru":"PortaBoil 129-X — это мини portable kettle для использования в дороге. Особенности: автоотключение и кипячение за 2 минуты. Идеально для автопутешествий, кемпинга и небольших пространств.","price":2880,"pop":2},{"id":590,"cat":"Portable Kettle","brand":"TravelBrews","name_en":"TravelBrews Stainless Steel Portable Kettle 780-F","name_ru":"TravelBrews лёгкий Portable Kettle 780-F","desc_en":"The TravelBrews 780-F is a stainless steel portable kettle designed for on-the-go use. Features include LED indicator and carry pouch included. Ideal for car travel, camping, and small spaces.","desc_ru":"TravelBrews 780-F — это лёгкий portable kettle для использования в дороге. Особенности: LED-индикатор и ёмкость 0.5 л. Идеально для автопутешествий, кемпинга и небольших пространств.","price":6180,"pop":2},{"id":476,"cat":"Portable Kettle","brand":"PortaBoil","name_en":"PortaBoil Rapid-Boil Portable Kettle 419-F","name_ru":"PortaBoil лёгкий Portable Kettle 419-F","desc_en":"The PortaBoil 419-F is a rapid-boil portable kettle designed for on-the-go use. Features include LED indicator and auto shut-off. Ideal for car travel, camping, and small spaces.","desc_ru":"PortaBoil 419-F — это лёгкий portable kettle для использования в дороге. Особенности: универсальное напряжение 110-240В и ёмкость 0.5 л. Идеально для автопутешествий, кемпинга и небольших пространств.","price":7240,"pop":0},{"id":477,"cat":"Portable Kettle","brand":"KettlePro","name_en":"KettlePro Travel-Sized Portable Kettle 955-C","name_ru":"KettlePro коллапсируемый Portable Kettle 955-C","desc_en":"The KettlePro 955-C is a travel-sized portable kettle designed for on-the-go use. Features include 1000W heating element and LED indicator. Ideal for car travel, camping, and small spaces.","desc_ru":"KettlePro 955-C — это коллапсируемый portable kettle для использования в дороге. Особенности: универсальное напряжение 110-240В и кипячение за 2 минуты. Идеально для автопутешествий, кемпинга и небольших пространств.","price":4250,"pop":0},{"id":504,"cat":"Portable Kettle","brand":"TravelBrews","name_en":"TravelBrews Travel-Sized Portable Kettle 862-F","name_ru":"TravelBrews складной Portable Kettle 862-F","desc_en":"The TravelBrews 862-F is a travel-sized portable kettle designed for on-the-go use. Features include 0.5L capacity and carry pouch included. Ideal for car travel, camping, and small spaces.","desc_ru":"TravelBrews 862-F — это складной portable kettle для использования в дороге. Особенности: кипячение за 2 минуты и нагревательный элемент 1000 Вт. Идеально для автопутешествий, кемпинга и небольших пространств.","price":5310,"pop":0},{"id":241,"cat":"Rice Cooker","brand":"ZenRice","name_en":"ZenRice Smart Rice Cooker 544-C","name_ru":"ZenRice из нержавеющей стали Rice Cooker 544-C","desc_en":"The ZenRice 544-C is a smart rice cooker designed for on-the-go use. Features include cool-touch handle and cord storage. Ideal for car travel, camping, and small spaces.","desc_ru":"ZenRice 544-C — это из нержавеющей стали rice cooker для использования в дороге. Особенности: съёмная антипригарная кастрюля и несколько режимов приготовления. Идеально для автопутешествий, кемпинга и небольших пространств.","price":20000,"pop":339},{"id":276,"cat":"Rice Cooker","brand":"GrainMaster","name_en":"GrainMaster Mini Rice Cooker 290-B","name_ru":"GrainMaster цифровой Rice Cooker 290-B","desc_en":"The GrainMaster 290-B is a mini rice cooker designed for on-the-go use. Features include 1L capacity and cord storage. Ideal for car travel, camping, and small spaces.","desc_ru":"GrainMaster 290-B — это цифровой rice cooker для использования в дороге. Особенности: мерный стакан и лопатка в комплекте и пароварочная корзина. Идеально для автопутешествий, кемпинга и небольших пространств.","price":19300,"pop":136},{"id":436,"cat":"Rice Cooker","brand":"GrainMaster","name_en":"GrainMaster Smart Rice Cooker 585-C","name_ru":"GrainMaster с антипригарным покрытием Rice Cooker 585-C","desc_en":"The GrainMaster 585-C is a smart rice cooker designed for on-the-go use. Features include 24-hour delay timer and non-stick removable pot. Ideal for car travel, camping, and small spaces.","desc_ru":"GrainMaster 585-C — это с антипригарным покрытием rice cooker для использования в дороге. Особенности: съёмная внутренняя крышка и пароварочная корзина. Идеально для автопутешествий, кемпинга и небольших пространств.","price":19940,"pop":89},{"id":879,"cat":"Rice Cooker","brand":"RiceKing","name_en":"RiceKing Portable Rice Cooker 296-E","name_ru":"RiceKing умный Rice Cooker 296-E","desc_en":"The RiceKing 296-E is a portable rice cooker designed for on-the-go use. Features include cool-touch handle and non-stick removable pot. Ideal for car travel, camping, and small spaces.","desc_ru":"RiceKing 296-E — это умный rice cooker для использования в дороге. Особенности: ёмкость 1 л и пароварочная корзина. Идеально для автопутешествий, кемпинга и небольших пространств.","price":24490,"pop":71},{"id":514,"cat":"Rice Cooker","brand":"PerfectGrain","name_en":"PerfectGrain Mini Rice Cooker 647-A","name_ru":"PerfectGrain компактный Rice Cooker 647-A","desc_en":"The PerfectGrain 647-A is a mini rice cooker designed for on-the-go use. Features include multiple cooking presets and measuring cup and spatula included. Ideal for car travel, camping, and small spaces.","desc_ru":"PerfectGrain 647-A — это компактный rice cooker для использования в дороге. Особенности: съёмная антипригарная кастрюля и мерный стакан и лопатка в комплекте. Идеально для автопутешествий, кемпинга и небольших пространств.","price":5180,"pop":63},{"id":856,"cat":"Rice Cooker","brand":"GrainMaster","name_en":"GrainMaster Fuzzy Logic Rice Cooker 306-B","name_ru":"GrainMaster компактный Rice Cooker 306-B","desc_en":"The GrainMaster 306-B is a fuzzy logic rice cooker designed for on-the-go use. Features include steam basket included and detachable inner lid. Ideal for car travel, camping, and small spaces.","desc_ru":"GrainMaster 306-B — это компактный rice cooker для использования в дороге. Особенности: съёмная внутренняя крышка и автоматическое поддержание тепла. Идеально для автопутешествий, кемпинга и небольших пространств.","price":5640,"pop":32},{"id":851,"cat":"Rice Cooker","brand":"RiceKing","name_en":"RiceKing Non-Stick Rice Cooker 651-D","name_ru":"RiceKing цифровой Rice Cooker 651-D","desc_en":"The RiceKing 651-D is a non-stick rice cooker designed for on-the-go use. Features include automatic keep-warm and multiple cooking presets. Ideal for car travel, camping, and small spaces.","desc_ru":"RiceKing 651-D — это цифровой rice cooker для использования в дороге. Особенности: автоматическое поддержание тепла и пароварочная корзина. Идеально для автопутешествий, кемпинга и небольших пространств.","price":22840,"pop":29},{"id":922,"cat":"Rice Cooker","brand":"CrispRice","name_en":"CrispRice Induction Rice Cooker 997-G","name_ru":"CrispRice цифровой Rice Cooker 997-G","desc_en":"The CrispRice 997-G is a induction rice cooker designed for on-the-go use. Features include automatic keep-warm and multiple cooking presets. Ideal for car travel, camping, and small spaces.","desc_ru":"CrispRice 997-G — это цифровой rice cooker для использования в дороге. Особенности: съёмная внутренняя крышка и ёмкость 1 л. Идеально для автопутешествий, кемпинга и небольших пространств.","price":19180,"pop":23},{"id":881,"cat":"Rice Cooker","brand":"ZenRice","name_en":"ZenRice Stainless Rice Cooker 279-G","name_ru":"ZenRice с антипригарным покрытием Rice Cooker 279-G","desc_en":"The ZenRice 279-G is a stainless rice cooker designed for on-the-go use. Features include cord storage and 1L capacity. Ideal for car travel, camping, and small spaces.","desc_ru":"ZenRice 279-G — это с антипригарным покрытием rice cooker для использования в дороге. Особенности: автоматическое поддержание тепла и хранение шнура. Идеально для автопутешествий, кемпинга и небольших пространств.","price":6450,"pop":22},{"id":574,"cat":"Rice Cooker","brand":"RiceKing","name_en":"RiceKing Micom Rice Cooker 639-C","name_ru":"RiceKing с нечёткой логикой Rice Cooker 639-C","desc_en":"The RiceKing 639-C is a micom rice cooker designed for on-the-go use. Features include non-stick removable pot and steam basket included. Ideal for car travel, camping, and small spaces.","desc_ru":"RiceKing 639-C — это с нечёткой логикой rice cooker для использования в дороге. Особенности: ёмкость 1 л и таймер на 24 часа. Идеально для автопутешествий, кемпинга и небольших пространств.","price":22210,"pop":16},{"id":13,"cat":"Rice Cooker","brand":"CrispRice","name_en":"CrispRice Stainless Rice Cooker 372-A","name_ru":"CrispRice портативный Rice Cooker 372-A","desc_en":"The CrispRice 372-A is a stainless rice cooker designed for on-the-go use. Features include multiple cooking presets and 1L capacity. Ideal for car travel, camping, and small spaces.","desc_ru":"CrispRice 372-A — это портативный rice cooker для использования в дороге. Особенности: мерный стакан и лопатка в комплекте и автоматическое поддержание тепла. Идеально для автопутешествий, кемпинга и небольших пространств.","price":23890,"pop":1},{"id":31,"cat":"Rice Cooker","brand":"GrainMaster","name_en":"GrainMaster Non-Stick Rice Cooker 889-F","name_ru":"GrainMaster из нержавеющей стали Rice Cooker 889-F","desc_en":"The GrainMaster 889-F is a non-stick rice cooker designed for on-the-go use. Features include 24-hour delay timer and automatic keep-warm. Ideal for car travel, camping, and small spaces.","desc_ru":"GrainMaster 889-F — это из нержавеющей стали rice cooker для использования в дороге. Особенности: таймер на 24 часа и съёмная антипригарная кастрюля. Идеально для автопутешествий, кемпинга и небольших пространств.","price":23600,"pop":1},{"id":36,"cat":"Rice Cooker","brand":"ZenRice","name_en":"ZenRice Induction Rice Cooker 431-C","name_ru":"ZenRice портативный Rice Cooker 431-C","desc_en":"The ZenRice 431-C is a induction rice cooker designed for on-the-go use. Features include non-stick removable pot and automatic keep-warm. Ideal for car travel, camping, and small spaces.","desc_ru":"ZenRice 431-C — это портативный rice cooker для использования в дороге. Особенности: автоматическое поддержание тепла и пароварочная корзина. Идеально для автопутешествий, кемпинга и небольших пространств.","price":19120,"pop":1},{"id":64,"cat":"Rice Cooker","brand":"RiceKing","name_en":"RiceKing Compact Rice Cooker 425-C","name_ru":"RiceKing с нечёткой логикой Rice Cooker 425-C","desc_en":"The RiceKing 425-C is a compact rice cooker designed for on-the-go use. Features include cool-touch handle and automatic keep-warm. Ideal for car travel, camping, and small spaces.","desc_ru":"RiceKing 425-C — это с нечёткой логикой rice cooker для использования в дороге. Особенности: несколько режимов приготовления и съёмная антипригарная кастрюля. Идеально для автопутешествий, кемпинга и небольших пространств.","price":24220,"pop":1},{"id":65,"cat":"Rice Cooker","brand":"PerfectGrain","name_en":"PerfectGrain Non-Stick Rice Cooker 930-F","name_ru":"PerfectGrain портативный Rice Cooker 930-F","desc_en":"The PerfectGrain 930-F is a non-stick rice cooker designed for on-the-go use. Features include automatic keep-warm and measuring cup and spatula included. Ideal for car travel, camping, and small spaces.","desc_ru":"PerfectGrain 930-F — это портативный rice cooker для использования в дороге. Особенности: съёмная антипригарная кастрюля и ручка cool-touch. Идеально для автопутешествий, кемпинга и небольших пространств.","price":14580,"pop":1},{"id":497,"cat":"Rice Cooker","brand":"GrainMaster","name_en":"GrainMaster Fuzzy Logic Rice Cooker 632-A","name_ru":"GrainMaster умный Rice Cooker 632-A","desc_en":"The GrainMaster 632-A is a fuzzy logic rice cooker designed for on-the-go use. Features include cord storage and cool-touch handle. Ideal for car travel, camping, and small spaces.","desc_ru":"GrainMaster 632-A — это умный rice cooker для использования в дороге. Особенности: съёмная внутренняя крышка и таймер на 24 часа. Идеально для автопутешествий, кемпинга и небольших пространств.","price":13180,"pop":0},{"id":516,"cat":"Rice Cooker","brand":"GrainMaster","name_en":"GrainMaster Stainless Rice Cooker 570-X","name_ru":"GrainMaster многофункциональный Rice Cooker 570-X","desc_en":"The GrainMaster 570-X is a stainless rice cooker designed for on-the-go use. Features include 24-hour delay timer and detachable inner lid. Ideal for car travel, camping, and small spaces.","desc_ru":"GrainMaster 570-X — это многофункциональный rice cooker для использования в дороге. Особенности: съёмная антипригарная кастрюля и автоматическое поддержание тепла. Идеально для автопутешествий, кемпинга и небольших пространств.","price":22130,"pop":0},{"id":517,"cat":"Rice Cooker","brand":"RiceKing","name_en":"RiceKing Induction Rice Cooker 855-A","name_ru":"RiceKing индукционный Rice Cooker 855-A","desc_en":"The RiceKing 855-A is a induction rice cooker designed for on-the-go use. Features include 24-hour delay timer and cool-touch handle. Ideal for car travel, camping, and small spaces.","desc_ru":"RiceKing 855-A — это индукционный rice cooker для использования в дороге. Особенности: съёмная антипригарная кастрюля и автоматическое поддержание тепла. Идеально для автопутешествий, кемпинга и небольших пространств.","price":15420,"pop":0},{"id":835,"cat":"Portable Blender","brand":"BlendJoy","name_en":"BlendJoy Personal Portable Blender 264-F","name_ru":"BlendJoy для смузи Portable Blender 264-F","desc_en":"The BlendJoy 264-F is a personal portable blender designed for on-the-go use. Features include 6 stainless blades and 2-speed settings. Ideal for car travel, camping, and small spaces.","desc_ru":"BlendJoy 264-F — это для смузи portable blender для использования в дороге. Особенности: кабель USB в комплекте и управление одной кнопкой. Идеально для автопутешествий, кемпинга и небольших пространств.","price":11630,"pop":302},{"id":58,"cat":"Portable Blender","brand":"MiniBlend","name_en":"MiniBlend Smoothie Portable Blender 798-F","name_ru":"MiniBlend USB Portable Blender 798-F","desc_en":"The MiniBlend 798-F is a smoothie portable blender designed for on-the-go use. Features include one-button operation and dishwasher-safe blade assembly. Ideal for car travel, camping, and small spaces.","desc_ru":"MiniBlend 798-F — это USB portable blender для использования в дороге. Особенности: 2 скоростных режима и кабель USB в комплекте. Идеально для автопутешествий, кемпинга и небольших пространств.","price":5950,"pop":137},{"id":421,"cat":"Portable Blender","brand":"FreshBlend","name_en":"FreshBlend Mini Portable Blender 537-E","name_ru":"FreshBlend тихий Portable Blender 537-E","desc_en":"The FreshBlend 537-E is a mini portable blender designed for on-the-go use. Features include USB charging cable included and one-button operation. Ideal for car travel, camping, and small spaces.","desc_ru":"FreshBlend 537-E — это тихий portable blender для использования в дороге. Особенности: аккумулятор 600 мАч и лезвия для посудомоечной машины. Идеально для автопутешествий, кемпинга и небольших пространств.","price":3920,"pop":63},{"id":401,"cat":"Portable Blender","brand":"FreshBlend","name_en":"FreshBlend Self-Cleaning Portable Blender 415-G","name_ru":"FreshBlend персональный Portable Blender 415-G","desc_en":"The FreshBlend 415-G is a self-cleaning portable blender designed for on-the-go use. Features include self-cleaning mode and leak-proof lid. Ideal for car travel, camping, and small spaces.","desc_ru":"FreshBlend 415-G — это персональный portable blender для использования в дороге. Особенности: 6 лезвий из нержавеющей стали и крышка без протечек. Идеально для автопутешествий, кемпинга и небольших пространств.","price":12770,"pop":47},{"id":520,"cat":"Portable Blender","brand":"VortexGo","name_en":"VortexGo Mini Portable Blender 413-X","name_ru":"VortexGo USB Portable Blender 413-X","desc_en":"The VortexGo 413-X is a mini portable blender designed for on-the-go use. Features include USB charging cable included and 2-speed settings. Ideal for car travel, camping, and small spaces.","desc_ru":"VortexGo 413-X — это USB portable blender для использования в дороге. Особенности: крышка без протечек и лезвия для посудомоечной машины. Идеально для автопутешествий, кемпинга и небольших пространств.","price":10270,"pop":44},{"id":236,"cat":"Portable Blender","brand":"BlendJoy","name_en":"BlendJoy Self-Cleaning Portable Blender 527-X","name_ru":"BlendJoy тихий Portable Blender 527-X","desc_en":"The BlendJoy 527-X is a self-cleaning portable blender designed for on-the-go use. Features include BPA-free tritan cup and 6 stainless blades. Ideal for car travel, camping, and small spaces.","desc_ru":"BlendJoy 527-X — это тихий portable blender для использования в дороге. Особенности: кабель USB в комплекте и режим самоочистки. Идеально для автопутешествий, кемпинга и небольших пространств.","price":13800,"pop":37},{"id":56,"cat":"Portable Blender","brand":"FreshBlend","name_en":"FreshBlend Quiet Portable Blender 361-E","name_ru":"FreshBlend для смузи Portable Blender 361-E","desc_en":"The FreshBlend 361-E is a quiet portable blender designed for on-the-go use. Features include leak-proof lid and 6 stainless blades. Ideal for car travel, camping, and small spaces.","desc_ru":"FreshBlend 361-E — это для смузи portable blender для использования в дороге. Особенности: чаша 400 мл и 2 скоростных режима. Идеально для автопутешествий, кемпинга и небольших пространств.","price":8470,"pop":28},{"id":78,"cat":"Portable Blender","brand":"FreshBlend","name_en":"FreshBlend Personal Portable Blender 229-E","name_ru":"FreshBlend дорожный Portable Blender 229-E","desc_en":"The FreshBlend 229-E is a personal portable blender designed for on-the-go use. Features include dishwasher-safe blade assembly and one-button operation. Ideal for car travel, camping, and small spaces.","desc_ru":"FreshBlend 229-E — это дорожный portable blender для использования в дороге. Особенности: крышка без протечек и режим самоочистки. Идеально для автопутешествий, кемпинга и небольших пространств.","price":11700,"pop":26},{"id":224,"cat":"Portable Blender","brand":"SmoothiePro","name_en":"SmoothiePro Cordless Portable Blender 977-X","name_ru":"SmoothiePro для смузи Portable Blender 977-X","desc_en":"The SmoothiePro 977-X is a cordless portable blender designed for on-the-go use. Features include one-button operation and 600mAh battery. Ideal for car travel, camping, and small spaces.","desc_ru":"SmoothiePro 977-X — это для смузи portable blender для использования в дороге. Особенности: кабель USB в комплекте и чаша 400 мл. Идеально для автопутешествий, кемпинга и небольших пространств.","price":14890,"pop":17},{"id":869,"cat":"Portable Blender","brand":"SmoothiePro","name_en":"SmoothiePro Rechargeable Portable Blender 524-A","name_ru":"SmoothiePro самоочищающийся Portable Blender 524-A","desc_en":"The SmoothiePro 524-A is a rechargeable portable blender designed for on-the-go use. Features include BPA-free tritan cup and 2-speed settings. Ideal for car travel, camping, and small spaces.","desc_ru":"SmoothiePro 524-A — это самоочищающийся portable blender для использования в дороге. Особенности: чаша BPA-free из тритана и 2 скоростных режима. Идеально для автопутешествий, кемпинга и небольших пространств.","price":6090,"pop":17},{"id":95,"cat":"Portable Blender","brand":"FreshBlend","name_en":"FreshBlend Mini Portable Blender 854-A","name_ru":"FreshBlend USB Portable Blender 854-A","desc_en":"The FreshBlend 854-A is a mini portable blender designed for on-the-go use. Features include BPA-free tritan cup and 2-speed settings. Ideal for car travel, camping, and small spaces.","desc_ru":"FreshBlend 854-A — это USB portable blender для использования в дороге. Особенности: аккумулятор 600 мАч и лезвия для посудомоечной машины. Идеально для автопутешествий, кемпинга и небольших пространств.","price":5280,"pop":1},{"id":128,"cat":"Portable Blender","brand":"SmoothiePro","name_en":"SmoothiePro Cordless Portable Blender 552-A","name_ru":"SmoothiePro самоочищающийся Portable Blender 552-A","desc_en":"The SmoothiePro 552-A is a cordless portable blender designed for on-the-go use. Features include 600mAh battery and dishwasher-safe blade assembly. Ideal for car travel, camping, and small spaces.","desc_ru":"SmoothiePro 552-A — это самоочищающийся portable blender для использования в дороге. Особенности: 6 лезвий из нержавеющей стали и 2 скоростных режима. Идеально для автопутешествий, кемпинга и небольших пространств.","price":11280,"pop":1},{"id":148,"cat":"Portable Blender","brand":"FreshBlend","name_en":"FreshBlend Self-Cleaning Portable Blender 284-A","name_ru":"FreshBlend USB Portable Blender 284-A","desc_en":"The FreshBlend 284-A is a self-cleaning portable blender designed for on-the-go use. Features include 600mAh battery and 400ml cup. Ideal for car travel, camping, and small spaces.","desc_ru":"FreshBlend 284-A — это USB portable blender для использования в дороге. Особенности: управление одной кнопкой и кабель USB в комплекте. Идеально для автопутешествий, кемпинга и небольших пространств.","price":12960,"pop":1},{"id":169,"cat":"Portable Blender","brand":"SmoothiePro","name_en":"SmoothiePro Personal Portable Blender 982-C","name_ru":"SmoothiePro перезаряжаемый Portable Blender 982-C","desc_en":"The SmoothiePro 982-C is a personal portable blender designed for on-the-go use. Features include one-button operation and 6 stainless blades. Ideal for car travel, camping, and small spaces.","desc_ru":"SmoothiePro 982-C — это перезаряжаемый portable blender для использования в дороге. Особенности: режим самоочистки и 2 скоростных режима. Идеально для автопутешествий, кемпинга и небольших пространств.","price":12610,"pop":1},{"id":186,"cat":"Portable Blender","brand":"MiniBlend","name_en":"MiniBlend Rechargeable Portable Blender 465-C","name_ru":"MiniBlend мини Portable Blender 465-C","desc_en":"The MiniBlend 465-C is a rechargeable portable blender designed for on-the-go use. Features include 600mAh battery and leak-proof lid. Ideal for car travel, camping, and small spaces.","desc_ru":"MiniBlend 465-C — это мини portable blender для использования в дороге. Особенности: режим самоочистки и аккумулятор 600 мАч. Идеально для автопутешествий, кемпинга и небольших пространств.","price":12680,"pop":1},{"id":485,"cat":"Portable Blender","brand":"SmoothiePro","name_en":"SmoothiePro Travel Portable Blender 441-D","name_ru":"SmoothiePro дорожный Portable Blender 441-D","desc_en":"The SmoothiePro 441-D is a travel portable blender designed for on-the-go use. Features include 600mAh battery and dishwasher-safe blade assembly. Ideal for car travel, camping, and small spaces.","desc_ru":"SmoothiePro 441-D — это дорожный portable blender для использования в дороге. Особенности: кабель USB в комплекте и чаша BPA-free из тритана. Идеально для автопутешествий, кемпинга и небольших пространств.","price":11940,"pop":0},{"id":500,"cat":"Portable Blender","brand":"SmoothiePro","name_en":"SmoothiePro Mini Portable Blender 716-D","name_ru":"SmoothiePro тихий Portable Blender 716-D","desc_en":"The SmoothiePro 716-D is a mini portable blender designed for on-the-go use. Features include USB charging cable included and one-button operation. Ideal for car travel, camping, and small spaces.","desc_ru":"SmoothiePro 716-D — это тихий portable blender для использования в дороге. Особенности: чаша BPA-free из тритана и кабель USB в комплекте. Идеально для автопутешествий, кемпинга и небольших пространств.","price":4540,"pop":0},{"id":508,"cat":"Portable Blender","brand":"FreshBlend","name_en":"FreshBlend Cordless Portable Blender 429-C","name_ru":"FreshBlend мощный Portable Blender 429-C","desc_en":"The FreshBlend 429-C is a cordless portable blender designed for on-the-go use. Features include one-button operation and 2-speed settings. Ideal for car travel, camping, and small spaces.","desc_ru":"FreshBlend 429-C — это мощный portable blender для использования в дороге. Особенности: аккумулятор 600 мАч и чаша 400 мл. Идеально для автопутешествий, кемпинга и небольших пространств.","price":13440,"pop":0},{"id":260,"cat":"Multi-Cooker","brand":"SmartPot","name_en":"SmartPot Compact Multi-Cooker 881-C","name_ru":"SmartPot электрический Multi-Cooker 881-C","desc_en":"The SmartPot 881-C is a compact multi-cooker designed for on-the-go use. Features include delay timer and keep-warm function. Ideal for car travel, camping, and small spaces.","desc_ru":"SmartPot 881-C — это электрический multi-cooker для использования в дороге. Особенности: внутренняя кастрюля 1.5 л и клапан сброса пара. Идеально для автопутешествий, кемпинга и небольших пространств.","price":17590,"pop":222},{"id":483,"cat":"Multi-Cooker","brand":"MultiChef","name_en":"MultiChef Mini Multi-Cooker 756-C","name_ru":"MultiChef многофункциональный Multi-Cooker 756-C","desc_en":"The MultiChef 756-C is a mini multi-cooker designed for on-the-go use. Features include delay timer and dishwasher-safe parts. Ideal for car travel, camping, and small spaces.","desc_ru":"MultiChef 756-C — это многофункциональный multi-cooker для использования в дороге. Особенности: сенсорная панель и 8 режимов приготовления. Идеально для автопутешествий, кемпинга и небольших пространств.","price":24480,"pop":94},{"id":935,"cat":"Multi-Cooker","brand":"QuickPot","name_en":"QuickPot Pressure Multi-Cooker 826-G","name_ru":"QuickPot программируемый Multi-Cooker 826-G","desc_en":"The QuickPot 826-G is a pressure multi-cooker designed for on-the-go use. Features include delay timer and 1.5L inner pot. Ideal for car travel, camping, and small spaces.","desc_ru":"QuickPot 826-G — это программируемый multi-cooker для использования в дороге. Особенности: сенсорная панель и 8 режимов приготовления. Идеально для автопутешествий, кемпинга и небольших пространств.","price":12690,"pop":72},{"id":582,"cat":"Multi-Cooker","brand":"QuickPot","name_en":"QuickPot Pressure Multi-Cooker 492-X","name_ru":"QuickPot медленноварка Multi-Cooker 492-X","desc_en":"The QuickPot 492-X is a pressure multi-cooker designed for on-the-go use. Features include keep-warm function and dishwasher-safe parts. Ideal for car travel, camping, and small spaces.","desc_ru":"QuickPot 492-X — это медленноварка multi-cooker для использования в дороге. Особенности: защита от перегрева и детали для посудомоечной машины. Идеально для автопутешествий, кемпинга и небольших пространств.","price":9010,"pop":66},{"id":637,"cat":"Multi-Cooker","brand":"AllCook","name_en":"AllCook Programmable Multi-Cooker 766-D","name_ru":"AllCook мини Multi-Cooker 766-D","desc_en":"The AllCook 766-D is a programmable multi-cooker designed for on-the-go use. Features include stainless steel housing and touch panel controls. Ideal for car travel, camping, and small spaces.","desc_ru":"AllCook 766-D — это мини multi-cooker для использования в дороге. Особенности: функция поддержания тепла и клапан сброса пара. Идеально для автопутешествий, кемпинга и небольших пространств.","price":25440,"pop":33},{"id":201,"cat":"Multi-Cooker","brand":"SmartPot","name_en":"SmartPot Programmable Multi-Cooker 425-F","name_ru":"SmartPot медленноварка Multi-Cooker 425-F","desc_en":"The SmartPot 425-F is a programmable multi-cooker designed for on-the-go use. Features include delay timer and steam release valve. Ideal for car travel, camping, and small spaces.","desc_ru":"SmartPot 425-F — это медленноварка multi-cooker для использования в дороге. Особенности: 8 режимов приготовления и корпус из нержавеющей стали. Идеально для автопутешествий, кемпинга и небольших пространств.","price":33580,"pop":29},{"id":554,"cat":"Multi-Cooker","brand":"CookMate","name_en":"CookMate Multifunctional Multi-Cooker 110-B","name_ru":"CookMate мини Multi-Cooker 110-B","desc_en":"The CookMate 110-B is a multifunctional multi-cooker designed for on-the-go use. Features include keep-warm function and dishwasher-safe parts. Ideal for car travel, camping, and small spaces.","desc_ru":"CookMate 110-B — это мини multi-cooker для использования в дороге. Особенности: антипригарное покрытие и защита от перегрева. Идеально для автопутешествий, кемпинга и небольших пространств.","price":28170,"pop":11},{"id":99,"cat":"Multi-Cooker","brand":"AllCook","name_en":"AllCook Programmable Multi-Cooker 111-E","name_ru":"AllCook умный Multi-Cooker 111-E","desc_en":"The AllCook 111-E is a programmable multi-cooker designed for on-the-go use. Features include 1.5L inner pot and stainless steel housing. Ideal for car travel, camping, and small spaces.","desc_ru":"AllCook 111-E — это умный multi-cooker для использования в дороге. Особенности: антипригарное покрытие и внутренняя кастрюля 1.5 л. Идеально для автопутешествий, кемпинга и небольших пространств.","price":17460,"pop":9},{"id":69,"cat":"Multi-Cooker","brand":"SmartPot","name_en":"SmartPot All-In-One Multi-Cooker 773-A","name_ru":"SmartPot программируемый Multi-Cooker 773-A","desc_en":"The SmartPot 773-A is a all-in-one multi-cooker designed for on-the-go use. Features include steam release valve and overheat protection. Ideal for car travel, camping, and small spaces.","desc_ru":"SmartPot 773-A — это программируемый multi-cooker для использования в дороге. Особенности: функция поддержания тепла и 8 режимов приготовления. Идеально для автопутешествий, кемпинга и небольших пространств.","price":33960,"pop":8},{"id":248,"cat":"Multi-Cooker","brand":"SmartPot","name_en":"SmartPot Smart Multi-Cooker 887-G","name_ru":"SmartPot электрический Multi-Cooker 887-G","desc_en":"The SmartPot 887-G is a smart multi-cooker designed for on-the-go use. Features include 1.5L inner pot and stainless steel housing. Ideal for car travel, camping, and small spaces.","desc_ru":"SmartPot 887-G — это электрический multi-cooker для использования в дороге. Особенности: 8 режимов приготовления и функция поддержания тепла. Идеально для автопутешествий, кемпинга и небольших пространств.","price":29160,"pop":8},{"id":977,"cat":"Multi-Cooker","brand":"QuickPot","name_en":"QuickPot Electric Multi-Cooker 219-C","name_ru":"QuickPot электрический Multi-Cooker 219-C","desc_en":"The QuickPot 219-C is a electric multi-cooker designed for on-the-go use. Features include 1.5L inner pot and steam release valve. Ideal for car travel, camping, and small spaces.","desc_ru":"QuickPot 219-C — это электрический multi-cooker для использования в дороге. Особенности: таймер задержки и защита от перегрева. Идеально для автопутешествий, кемпинга и небольших пространств.","price":18490,"pop":2},{"id":5,"cat":"Multi-Cooker","brand":"CookMate","name_en":"CookMate Pressure Multi-Cooker 922-X","name_ru":"CookMate электрический Multi-Cooker 922-X","desc_en":"The CookMate 922-X is a pressure multi-cooker designed for on-the-go use. Features include dishwasher-safe parts and touch panel controls. Ideal for car travel, camping, and small spaces.","desc_ru":"CookMate 922-X — это электрический multi-cooker для использования в дороге. Особенности: антипригарное покрытие и корпус из нержавеющей стали. Идеально для автопутешествий, кемпинга и небольших пространств.","price":16450,"pop":1},{"id":45,"cat":"Multi-Cooker","brand":"SmartPot","name_en":"SmartPot Mini Multi-Cooker 942-A","name_ru":"SmartPot компактный Multi-Cooker 942-A","desc_en":"The SmartPot 942-A is a mini multi-cooker designed for on-the-go use. Features include touch panel controls and keep-warm function. Ideal for car travel, camping, and small spaces.","desc_ru":"SmartPot 942-A — это компактный multi-cooker для использования в дороге. Особенности: сенсорная панель и антипригарное покрытие. Идеально для автопутешествий, кемпинга и небольших пространств.","price":34720,"pop":1},{"id":67,"cat":"Multi-Cooker","brand":"CookMate","name_en":"CookMate Smart Multi-Cooker 691-B","name_ru":"CookMate скороварка Multi-Cooker 691-B","desc_en":"The CookMate 691-B is a smart multi-cooker designed for on-the-go use. Features include non-stick coating and keep-warm function. Ideal for car travel, camping, and small spaces.","desc_ru":"CookMate 691-B — это скороварка multi-cooker для использования в дороге. Особенности: таймер задержки и корпус из нержавеющей стали. Идеально для автопутешествий, кемпинга и небольших пространств.","price":16800,"pop":1},{"id":86,"cat":"Multi-Cooker","brand":"SmartPot","name_en":"SmartPot Mini Multi-Cooker 840-A","name_ru":"SmartPot мини Multi-Cooker 840-A","desc_en":"The SmartPot 840-A is a mini multi-cooker designed for on-the-go use. Features include keep-warm function and steam release valve. Ideal for car travel, camping, and small spaces.","desc_ru":"SmartPot 840-A — это мини multi-cooker для использования в дороге. Особенности: функция поддержания тепла и антипригарное покрытие. Идеально для автопутешествий, кемпинга и небольших пространств.","price":9680,"pop":1},{"id":533,"cat":"Multi-Cooker","brand":"SmartPot","name_en":"SmartPot Mini Multi-Cooker 795-B","name_ru":"SmartPot программируемый Multi-Cooker 795-B","desc_en":"The SmartPot 795-B is a mini multi-cooker designed for on-the-go use. Features include steam release valve and keep-warm function. Ideal for car travel, camping, and small spaces.","desc_ru":"SmartPot 795-B — это программируемый multi-cooker для использования в дороге. Особенности: корпус из нержавеющей стали и 8 режимов приготовления. Идеально для автопутешествий, кемпинга и небольших пространств.","price":34800,"pop":0},{"id":539,"cat":"Multi-Cooker","brand":"CookMate","name_en":"CookMate Pressure Multi-Cooker 844-X","name_ru":"CookMate умный Multi-Cooker 844-X","desc_en":"The CookMate 844-X is a pressure multi-cooker designed for on-the-go use. Features include delay timer and overheat protection. Ideal for car travel, camping, and small spaces.","desc_ru":"CookMate 844-X — это умный multi-cooker для использования в дороге. Особенности: детали для посудомоечной машины и клапан сброса пара. Идеально для автопутешествий, кемпинга и небольших пространств.","price":30440,"pop":0},{"id":540,"cat":"Multi-Cooker","brand":"SmartPot","name_en":"SmartPot Electric Multi-Cooker 972-X","name_ru":"SmartPot электрический Multi-Cooker 972-X","desc_en":"The SmartPot 972-X is a electric multi-cooker designed for on-the-go use. Features include touch panel controls and delay timer. Ideal for car travel, camping, and small spaces.","desc_ru":"SmartPot 972-X — это электрический multi-cooker для использования в дороге. Особенности: 8 режимов приготовления и внутренняя кастрюля 1.5 л. Идеально для автопутешествий, кемпинга и небольших пространств.","price":10690,"pop":0},{"id":916,"cat":"Coffee Maker","brand":"MobileBrew","name_en":"MobileBrew Portable Coffee Maker 510-B","name_ru":"MobileBrew эспрессо Coffee Maker 510-B","desc_en":"The MobileBrew 510-B is a portable coffee maker designed for on-the-go use. Features include 15-bar pressure pump and reusable filter. Ideal for car travel, camping, and small spaces.","desc_ru":"MobileBrew 510-B — это эспрессо coffee maker для использования в дороге. Особенности: насос давления 15 бар и режим самоочистки. Идеально для автопутешествий, кемпинга и небольших пространств.","price":39110,"pop":655},{"id":226,"cat":"Coffee Maker","brand":"MobileBrew","name_en":"MobileBrew Hand-Held Coffee Maker 976-D","name_ru":"MobileBrew холодного заваривания Coffee Maker 976-D","desc_en":"The MobileBrew 976-D is a hand-held coffee maker designed for on-the-go use. Features include self-cleaning mode and thermal carafe. Ideal for car travel, camping, and small spaces.","desc_ru":"MobileBrew 976-D — это холодного заваривания coffee maker для использования в дороге. Особенности: многоразовый фильтр и вспениватель молока. Идеально для автопутешествий, кемпинга и небольших пространств.","price":30160,"pop":478},{"id":299,"cat":"Coffee Maker","brand":"JavaPod","name_en":"JavaPod Cold-Brew Coffee Maker 956-D","name_ru":"JavaPod порционный Coffee Maker 956-D","desc_en":"The JavaPod 956-D is a cold-brew coffee maker designed for on-the-go use. Features include temperature control and thermal carafe. Ideal for car travel, camping, and small spaces.","desc_ru":"JavaPod 956-D — это порционный coffee maker для использования в дороге. Особенности: крышка от разливания и термос-кофейник. Идеально для автопутешествий, кемпинга и небольших пространств.","price":16080,"pop":153},{"id":684,"cat":"Coffee Maker","brand":"EspressoX","name_en":"EspressoX Stovetop Coffee Maker 709-B","name_ru":"EspressoX капсульный Coffee Maker 709-B","desc_en":"The EspressoX 709-B is a stovetop coffee maker designed for on-the-go use. Features include thermal carafe and pod and ground compatible. Ideal for car travel, camping, and small spaces.","desc_ru":"EspressoX 709-B — это капсульный coffee maker для использования в дороге. Особенности: вспениватель молока и зарядка USB-C. Идеально для автопутешествий, кемпинга и небольших пространств.","price":13770,"pop":127},{"id":625,"cat":"Coffee Maker","brand":"EspressoX","name_en":"EspressoX Cold-Brew Coffee Maker 359-E","name_ru":"EspressoX ручной Coffee Maker 359-E","desc_en":"The EspressoX 359-E is a cold-brew coffee maker designed for on-the-go use. Features include thermal carafe and 15-bar pressure pump. Ideal for car travel, camping, and small spaces.","desc_ru":"EspressoX 359-E — это ручной coffee maker для использования в дороге. Особенности: насос давления 15 бар и контроль температуры. Идеально для автопутешествий, кемпинга и небольших пространств.","price":37220,"pop":66},{"id":139,"cat":"Coffee Maker","brand":"MobileBrew","name_en":"MobileBrew Cold-Brew Coffee Maker 478-C","name_ru":"MobileBrew капсульный Coffee Maker 478-C","desc_en":"The MobileBrew 478-C is a cold-brew coffee maker designed for on-the-go use. Features include thermal carafe and reusable filter. Ideal for car travel, camping, and small spaces.","desc_ru":"MobileBrew 478-C — это капсульный coffee maker для использования в дороге. Особенности: многоразовый фильтр и контроль температуры. Идеально для автопутешествий, кемпинга и небольших пространств.","price":10510,"pop":36},{"id":487,"cat":"Coffee Maker","brand":"CaféToGo","name_en":"CaféToGo Rechargeable Coffee Maker 108-G","name_ru":"CaféToGo эспрессо Coffee Maker 108-G","desc_en":"The CaféToGo 108-G is a rechargeable coffee maker designed for on-the-go use. Features include milk frother included and 15-bar pressure pump. Ideal for car travel, camping, and small spaces.","desc_ru":"CaféToGo 108-G — это эспрессо coffee maker для использования в дороге. Особенности: регулируемая крепость и зарядка USB-C. Идеально для автопутешествий, кемпинга и небольших пространств.","price":17290,"pop":24},{"id":589,"cat":"Coffee Maker","brand":"BrewGo","name_en":"BrewGo Capsule Coffee Maker 435-X","name_ru":"BrewGo портативный Coffee Maker 435-X","desc_en":"The BrewGo 435-X is a capsule coffee maker designed for on-the-go use. Features include temperature control and USB-C charging. Ideal for car travel, camping, and small spaces.","desc_ru":"BrewGo 435-X — это портативный coffee maker для использования в дороге. Особенности: режим самоочистки и регулируемая крепость. Идеально для автопутешествий, кемпинга и небольших пространств.","price":20450,"pop":20},{"id":627,"cat":"Coffee Maker","brand":"BrewGo","name_en":"BrewGo Espresso Coffee Maker 837-D","name_ru":"BrewGo ручной Coffee Maker 837-D","desc_en":"The BrewGo 837-D is a espresso coffee maker designed for on-the-go use. Features include USB-C charging and adjustable brew strength. Ideal for car travel, camping, and small spaces.","desc_ru":"BrewGo 837-D — это ручной coffee maker для использования в дороге. Особенности: режим самоочистки и насос давления 15 бар. Идеально для автопутешествий, кемпинга и небольших пространств.","price":32540,"pop":15},{"id":159,"cat":"Coffee Maker","brand":"CaféToGo","name_en":"CaféToGo Cold-Brew Coffee Maker 169-B","name_ru":"CaféToGo холодного заваривания Coffee Maker 169-B","desc_en":"The CaféToGo 169-B is a cold-brew coffee maker designed for on-the-go use. Features include reusable filter and spill-proof lid. Ideal for car travel, camping, and small spaces.","desc_ru":"CaféToGo 169-B — это холодного заваривания coffee maker для использования в дороге. Особенности: зарядка USB-C и крышка от разливания. Идеально для автопутешествий, кемпинга и небольших пространств.","price":11810,"pop":12},{"id":945,"cat":"Coffee Maker","brand":"CaféToGo","name_en":"CaféToGo Stovetop Coffee Maker 619-D","name_ru":"CaféToGo ручной Coffee Maker 619-D","desc_en":"The CaféToGo 619-D is a stovetop coffee maker designed for on-the-go use. Features include 15-bar pressure pump and self-cleaning mode. Ideal for car travel, camping, and small spaces.","desc_ru":"CaféToGo 619-D — это ручной coffee maker для использования в дороге. Особенности: многоразовый фильтр и вспениватель молока. Идеально для автопутешествий, кемпинга и небольших пространств.","price":5910,"pop":2},{"id":947,"cat":"Coffee Maker","brand":"BrewGo","name_en":"BrewGo Cold-Brew Coffee Maker 285-F","name_ru":"BrewGo перезаряжаемый Coffee Maker 285-F","desc_en":"The BrewGo 285-F is a cold-brew coffee maker designed for on-the-go use. Features include thermal carafe and temperature control. Ideal for car travel, camping, and small spaces.","desc_ru":"BrewGo 285-F — это перезаряжаемый coffee maker для использования в дороге. Особенности: режим самоочистки и многоразовый фильтр. Идеально для автопутешествий, кемпинга и небольших пространств.","price":22510,"pop":2},{"id":949,"cat":"Coffee Maker","brand":"MobileBrew","name_en":"MobileBrew Rechargeable Coffee Maker 427-C","name_ru":"MobileBrew порционный Coffee Maker 427-C","desc_en":"The MobileBrew 427-C is a rechargeable coffee maker designed for on-the-go use. Features include pod and ground compatible and thermal carafe. Ideal for car travel, camping, and small spaces.","desc_ru":"MobileBrew 427-C — это порционный coffee maker для использования в дороге. Особенности: контроль температуры и крышка от разливания. Идеально для автопутешествий, кемпинга и небольших пространств.","price":15930,"pop":2},{"id":41,"cat":"Coffee Maker","brand":"MobileBrew","name_en":"MobileBrew Portable Coffee Maker 272-F","name_ru":"MobileBrew гейзерный Coffee Maker 272-F","desc_en":"The MobileBrew 272-F is a portable coffee maker designed for on-the-go use. Features include adjustable brew strength and thermal carafe. Ideal for car travel, camping, and small spaces.","desc_ru":"MobileBrew 272-F — это гейзерный coffee maker для использования в дороге. Особенности: термос-кофейник и контроль температуры. Идеально для автопутешествий, кемпинга и небольших пространств.","price":12770,"pop":1},{"id":76,"cat":"Coffee Maker","brand":"CaféToGo","name_en":"CaféToGo Capsule Coffee Maker 782-C","name_ru":"CaféToGo холодного заваривания Coffee Maker 782-C","desc_en":"The CaféToGo 782-C is a capsule coffee maker designed for on-the-go use. Features include pod and ground compatible and adjustable brew strength. Ideal for car travel, camping, and small spaces.","desc_ru":"CaféToGo 782-C — это холодного заваривания coffee maker для использования в дороге. Особенности: совместим с капсулами и молотым кофе и вспениватель молока. Идеально для автопутешествий, кемпинга и небольших пространств.","price":28810,"pop":1},{"id":585,"cat":"Coffee Maker","brand":"CaféToGo","name_en":"CaféToGo Stovetop Coffee Maker 940-F","name_ru":"CaféToGo портативный Coffee Maker 940-F","desc_en":"The CaféToGo 940-F is a stovetop coffee maker designed for on-the-go use. Features include USB-C charging and 15-bar pressure pump. Ideal for car travel, camping, and small spaces.","desc_ru":"CaféToGo 940-F — это портативный coffee maker для использования в дороге. Особенности: регулируемая крепость и зарядка USB-C. Идеально для автопутешествий, кемпинга и небольших пространств.","price":12470,"pop":0},{"id":587,"cat":"Coffee Maker","brand":"JavaPod","name_en":"JavaPod Stovetop Coffee Maker 916-X","name_ru":"JavaPod перезаряжаемый Coffee Maker 916-X","desc_en":"The JavaPod 916-X is a stovetop coffee maker designed for on-the-go use. Features include self-cleaning mode and USB-C charging. Ideal for car travel, camping, and small spaces.","desc_ru":"JavaPod 916-X — это перезаряжаемый coffee maker для использования в дороге. Особенности: вспениватель молока и крышка от разливания. Идеально для автопутешествий, кемпинга и небольших пространств.","price":28580,"pop":0},{"id":594,"cat":"Coffee Maker","brand":"BrewGo","name_en":"BrewGo Cold-Brew Coffee Maker 735-F","name_ru":"BrewGo порционный Coffee Maker 735-F","desc_en":"The BrewGo 735-F is a cold-brew coffee maker designed for on-the-go use. Features include temperature control and reusable filter. Ideal for car travel, camping, and small spaces.","desc_ru":"BrewGo 735-F — это порционный coffee maker для использования в дороге. Особенности: контроль температуры и вспениватель молока. Идеально для автопутешествий, кемпинга и небольших пространств.","price":35970,"pop":0}]</script>
+  <script type="application/json" id="data-stats">{
+  "totals": {
+    "products": 1000,
+    "users": 1000,
+    "interactions": 6240,
+    "density": "0.62",
+    "cold": 150,
+    "warm": 850,
+    "zero": 45,
+    "coveredItems": 501,
+    "zeroPopItems": 499
+  },
+  "itemPopularity": [
+    {
+      "rank": 1,
+      "count": 875
+    },
+    {
+      "rank": 11,
+      "count": 127
+    },
+    {
+      "rank": 21,
+      "count": 48
+    },
+    {
+      "rank": 31,
+      "count": 29
+    },
+    {
+      "rank": 41,
+      "count": 20
+    },
+    {
+      "rank": 51,
+      "count": 15
+    },
+    {
+      "rank": 61,
+      "count": 12
+    },
+    {
+      "rank": 71,
+      "count": 9
+    },
+    {
+      "rank": 81,
+      "count": 8
+    },
+    {
+      "rank": 91,
+      "count": 7
+    },
+    {
+      "rank": 101,
+      "count": 6
+    },
+    {
+      "rank": 111,
+      "count": 5
+    },
+    {
+      "rank": 121,
+      "count": 4
+    },
+    {
+      "rank": 131,
+      "count": 4
+    },
+    {
+      "rank": 141,
+      "count": 3
+    },
+    {
+      "rank": 151,
+      "count": 3
+    },
+    {
+      "rank": 161,
+      "count": 3
+    },
+    {
+      "rank": 171,
+      "count": 3
+    },
+    {
+      "rank": 181,
+      "count": 2
+    },
+    {
+      "rank": 191,
+      "count": 2
+    },
+    {
+      "rank": 201,
+      "count": 2
+    },
+    {
+      "rank": 211,
+      "count": 2
+    },
+    {
+      "rank": 221,
+      "count": 2
+    },
+    {
+      "rank": 231,
+      "count": 2
+    },
+    {
+      "rank": 241,
+      "count": 2
+    },
+    {
+      "rank": 251,
+      "count": 2
+    },
+    {
+      "rank": 261,
+      "count": 2
+    },
+    {
+      "rank": 271,
+      "count": 1
+    },
+    {
+      "rank": 281,
+      "count": 1
+    },
+    {
+      "rank": 291,
+      "count": 1
+    },
+    {
+      "rank": 301,
+      "count": 1
+    },
+    {
+      "rank": 311,
+      "count": 1
+    },
+    {
+      "rank": 321,
+      "count": 1
+    },
+    {
+      "rank": 331,
+      "count": 1
+    },
+    {
+      "rank": 341,
+      "count": 1
+    },
+    {
+      "rank": 351,
+      "count": 1
+    },
+    {
+      "rank": 361,
+      "count": 1
+    },
+    {
+      "rank": 371,
+      "count": 1
+    },
+    {
+      "rank": 381,
+      "count": 1
+    },
+    {
+      "rank": 391,
+      "count": 1
+    },
+    {
+      "rank": 401,
+      "count": 1
+    },
+    {
+      "rank": 411,
+      "count": 1
+    },
+    {
+      "rank": 421,
+      "count": 1
+    },
+    {
+      "rank": 431,
+      "count": 1
+    },
+    {
+      "rank": 441,
+      "count": 1
+    },
+    {
+      "rank": 451,
+      "count": 1
+    },
+    {
+      "rank": 461,
+      "count": 1
+    },
+    {
+      "rank": 471,
+      "count": 1
+    },
+    {
+      "rank": 481,
+      "count": 1
+    },
+    {
+      "rank": 491,
+      "count": 1
+    }
+  ],
+  "userActivity": [
+    {
+      "lo": 0,
+      "hi": 0,
+      "count": 0
+    },
+    {
+      "lo": 0,
+      "hi": 2,
+      "count": 105
+    },
+    {
+      "lo": 2,
+      "hi": 5,
+      "count": 541
+    },
+    {
+      "lo": 5,
+      "hi": 10,
+      "count": 236
+    },
+    {
+      "lo": 10,
+      "hi": 20,
+      "count": 49
+    },
+    {
+      "lo": 20,
+      "hi": 30,
+      "count": 11
+    },
+    {
+      "lo": 30,
+      "hi": 40,
+      "count": 1
+    },
+    {
+      "lo": 40,
+      "hi": 60,
+      "count": 12
+    }
+  ],
+  "categories": [
+    {
+      "category": "Portable Kettle",
+      "count": 200,
+      "avgPrice": 4588,
+      "minPrice": 1510,
+      "maxPrice": 8000
+    },
+    {
+      "category": "Rice Cooker",
+      "count": 200,
+      "avgPrice": 15293,
+      "minPrice": 5000,
+      "maxPrice": 24940
+    },
+    {
+      "category": "Portable Blender",
+      "count": 200,
+      "avgPrice": 9022,
+      "minPrice": 3010,
+      "maxPrice": 14990
+    },
+    {
+      "category": "Multi-Cooker",
+      "count": 200,
+      "avgPrice": 21892,
+      "minPrice": 8030,
+      "maxPrice": 34930
+    },
+    {
+      "category": "Coffee Maker",
+      "count": 200,
+      "avgPrice": 22227,
+      "minPrice": 4190,
+      "maxPrice": 39910
+    }
+  ],
+  "popValuesSample": [
+    875,
+    222,
+    127,
+    71,
+    48,
+    37,
+    29,
+    25,
+    20,
+    16,
+    15,
+    14,
+    12,
+    11,
+    9,
+    8,
+    8,
+    7,
+    7,
+    6,
+    6,
+    5,
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ]
+}</script>
+  <script type="application/json" id="data-metrics">{
+  "status": "measured",
+  "run_date": "2026-05-11 13:35 UTC",
+  "dataset": {
+    "users": 1000,
+    "products": 1000,
+    "interactions": 19753,
+    "density": 1.975,
+    "cold_users": 150,
+    "warm_users": 850,
+    "zero_pop_items": 74
+  },
+  "config": {
+    "als": {
+      "factors": 20,
+      "regularization": 0.1,
+      "alpha": 40,
+      "iterations": 15
+    },
+    "item_cf": {
+      "k_neighbors": 20
+    },
+    "hybrid": {
+      "alpha": 0.6
+    },
+    "split": {
+      "test_fraction": 0.2,
+      "seed": 42
+    }
+  },
+  "results": {
+    "warm": {
+      "pop": {
+        "p": {
+          "5": 0.2861,
+          "10": 0.1912,
+          "20": 0.1196
+        },
+        "r": {
+          "5": 0.4165,
+          "10": 0.5297,
+          "20": 0.6368
+        },
+        "n": {
+          "5": 0.4896,
+          "10": 0.5059,
+          "20": 0.5279
+        }
+      },
+      "item_cf": {
+        "p": {
+          "5": 0.2699,
+          "10": 0.1874,
+          "20": 0.1114
+        },
+        "r": {
+          "5": 0.385,
+          "10": 0.5264,
+          "20": 0.6275
+        },
+        "n": {
+          "5": 0.43,
+          "10": 0.4605,
+          "20": 0.479
+        }
+      },
+      "content": {
+        "p": {
+          "5": 0.0066,
+          "10": 0.0071,
+          "20": 0.0054
+        },
+        "r": {
+          "5": 0.0087,
+          "10": 0.0197,
+          "20": 0.0249
+        },
+        "n": {
+          "5": 0.0084,
+          "10": 0.0127,
+          "20": 0.0143
+        }
+      },
+      "als": {
+        "p": {
+          "5": 0.1835,
+          "10": 0.1331,
+          "20": 0.0954
+        },
+        "r": {
+          "5": 0.3596,
+          "10": 0.4791,
+          "20": 0.5931
+        },
+        "n": {
+          "5": 0.3345,
+          "10": 0.3824,
+          "20": 0.4236
+        }
+      },
+      "hybrid": {
+        "p": {
+          "5": 0.1416,
+          "10": 0.1153,
+          "20": 0.0822
+        },
+        "r": {
+          "5": 0.2575,
+          "10": 0.4033,
+          "20": 0.5469
+        },
+        "n": {
+          "5": 0.23,
+          "10": 0.285,
+          "20": 0.3308
+        }
+      }
+    },
+    "cold": {
+      "pop": {
+        "p": {
+          "5": 0.1348,
+          "10": 0.0717,
+          "20": 0.0391
+        },
+        "r": {
+          "5": 0.6739,
+          "10": 0.7174,
+          "20": 0.7826
+        },
+        "n": {
+          "5": 0.5702,
+          "10": 0.5845,
+          "20": 0.601
+        }
+      },
+      "item_cf": {
+        "p": {
+          "5": 0.087,
+          "10": 0.0543,
+          "20": 0.0326
+        },
+        "r": {
+          "5": 0.4348,
+          "10": 0.5435,
+          "20": 0.6522
+        },
+        "n": {
+          "5": 0.3187,
+          "10": 0.3548,
+          "20": 0.3835
+        }
+      },
+      "content": {
+        "p": {
+          "5": 0.0043,
+          "10": 0.0022,
+          "20": 0.0011
+        },
+        "r": {
+          "5": 0.0217,
+          "10": 0.0217,
+          "20": 0.0217
+        },
+        "n": {
+          "5": 0.0094,
+          "10": 0.0094,
+          "20": 0.0094
+        }
+      },
+      "als": {
+        "p": {
+          "5": 0.1043,
+          "10": 0.0565,
+          "20": 0.0315
+        },
+        "r": {
+          "5": 0.5217,
+          "10": 0.5652,
+          "20": 0.6304
+        },
+        "n": {
+          "5": 0.4155,
+          "10": 0.4298,
+          "20": 0.4462
+        }
+      },
+      "hybrid": {
+        "p": {
+          "5": 0.087,
+          "10": 0.0543,
+          "20": 0.0315
+        },
+        "r": {
+          "5": 0.4348,
+          "10": 0.5435,
+          "20": 0.6304
+        },
+        "n": {
+          "5": 0.2474,
+          "10": 0.2843,
+          "20": 0.307
+        }
+      }
+    }
+  },
+  "coverage": {
+    "pop": 0.038,
+    "item_cf": 0.106,
+    "content": 0.608,
+    "als": 0.191,
+    "hybrid": 0.29
+  },
+  "latency": {
+    "pop": 0.17,
+    "item_cf": 0.31,
+    "content": 1.19,
+    "als": 0.2,
+    "hybrid": 1.23
+  }
+}</script>
+  <script type="text/babel" src="lib/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="lib/shared.jsx"></script>
+  <script type="text/babel" src="lib/storefront.jsx"></script>
+  <script type="text/babel" src="lib/dashboard.jsx"></script>
+  <script type="text/babel" src="lib/app.jsx"></script>
+</body>
+</html>
